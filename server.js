@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 27017;
 const cors = require('cors');
 // const config = require("./config")
 
@@ -28,10 +28,10 @@ app.use(bodyParser.json());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/caninecupidDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Mahomet-HoA-users", { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get("/status", function(req, res) {
-  res.send("Welcome to Canine Cupid!");
+  res.send("Welcome to Mahomet HoA!");
 });
 
 // Start the API server
