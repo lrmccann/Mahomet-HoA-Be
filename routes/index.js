@@ -16,6 +16,11 @@ router
     .get(auth.authentication, usersController.findByName)    // get 1 user by name (:id1)   
     .put(auth.authentication, usersController.updateByName)      // update 1 user by userName (:id1)
 
+
 module.exports = router;
 
-
+////////////////////////////////////////////////////////////////////////
+// Matches with "/api/posts/:id"
+// router
+//   .route("/:id")
+//   .delete(usersController.remove);
